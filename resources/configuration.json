@@ -1,0 +1,25 @@
+{
+    "remove_chars": ["#", "-", "N°", "CON"],
+    "clear_words": [
+        {
+            "word_target": "CL",
+            "word_lexer": "Z",
+            "words_variants": ["CALLE", "CALL", "CALE"]
+        },
+        {
+            "word_target": "KR",
+            "word_lexer": "K",
+            "words_variants": ["KARRERA", "CARERA", "CARRERA"]
+        },
+        {
+            "word_target": "TR",
+            "word_lexer": "A",
+            "words_variants": ["TRANSVERSAL", "TRANSV"]
+        },
+        {
+            "word_target": "BR",
+            "word_lexer": "B",
+            "words_variants": ["BARRIO", "BARIO", "BALIO"]
+        }
+    ]
+}
