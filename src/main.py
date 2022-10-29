@@ -1,3 +1,4 @@
+import os
 import json
 from flask import Flask, request
 from lexer import pre_process_text
@@ -16,5 +17,7 @@ def pre_process_address():
 
     return json.dumps(vJsonRespond)
 
-if __name__ == "__main__":
-    vApp.run(host = "0.0.0.0", port = 81)
+vPort = os.getenv("PORT")
+print("PORT:", vPort)
+
+#vApp.run(host = "0.0.0.0", port = vPort)

@@ -7,8 +7,8 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 RUN mkdir resources
-COPY ./resources/configuration.json ./wd/resources
+COPY ./resources/configuration.json ./resources
 
 COPY src/ ./
 
-CMD ["python3", "./main.py"]
+CMD exec gunicorn --workers=2 --threads=2 -b :$PORT main:vApp
